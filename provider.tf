@@ -9,8 +9,13 @@ terraform {
       version = "~>3.0"
     }
   }
+    backend "azurerm" {
+    resource_group_name  = "NetworkWatcherRG"
+    storage_account_name = "tfstatefile2024041423"
+    container_name       = "tfstatecontainer"
+    key                  = "terraform.tfstate"
+  }
 }
-
 provider "azurerm" {
   features {
     
