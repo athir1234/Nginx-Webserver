@@ -1,30 +1,30 @@
 variable "rgname" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
 }
 
 variable "vnetname" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
 }
 
 variable "location" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
 }
 
 variable "dnsservers" {
-  type = list(string)
+  type        = list(string)
   description = "(optional) describe your variable"
 }
 
 variable "addspace" {
-  type = list(string)
+  type        = list(string)
   description = "(optional) describe your variable"
 }
 
 variable "machine_size" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
 }
 
@@ -47,42 +47,42 @@ variable "address_prefix" {
 }
 
 variable "username" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
 }
 
 variable "password" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
 }
 
 variable "caching" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
 }
 
 variable "accnttype" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
 }
 
 variable "ospublisher" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
 }
 
 variable "offer" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
 }
 
 variable "sku" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
 }
 
 variable "release" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
 }
 
@@ -110,15 +110,15 @@ variable "security_rule" {
     destination_address_prefix = "*"
     },
     {
-    name                       = "Http"
-    priority                   = 1001
-    direction                  = "Inbound"
-    access                     = "Allow"
-    protocol                   = "Tcp"
-    source_port_range          = "*"
-    destination_port_range     = 80
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
+      name                       = "Http"
+      priority                   = 1001
+      direction                  = "Inbound"
+      access                     = "Allow"
+      protocol                   = "Tcp"
+      source_port_range          = "*"
+      destination_port_range     = 80
+      source_address_prefix      = "*"
+      destination_address_prefix = "*"
     }
-    ]
+  ]
 }
