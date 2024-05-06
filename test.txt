@@ -1,1 +1,2 @@
 inserted a new line by user1
+inserted a new line by user2
