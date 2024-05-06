@@ -1,1 +1,1 @@
-rgname = "nginx-webserver-az-dev"
+#rgname = "nginx-webserver-az-dev"
