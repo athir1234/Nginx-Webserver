@@ -13,7 +13,7 @@ terraform {
     resource_group_name  = "tfstatefilerg"
     storage_account_name = "tfstatefile2024041423"
     container_name       = "tfstatecontainer"
-    key                  = "terraform.tfstate"
+    key                  = "terraform.tfstate" #seperate statefile for each workspace env will be created automatically in remote/local
   }
 }
 provider "azurerm" {

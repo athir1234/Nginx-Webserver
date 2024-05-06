@@ -7,9 +7,9 @@ resource "random_string" "name" {
 resource "azurerm_resource_group" "my_resource_group" {
   name     = var.rgname
   location = var.location
-  lifecycle {
-    prevent_destroy = true
-  }
+  # lifecycle {
+  #   prevent_destroy = true
+  # }
 }
 
 resource "azurerm_virtual_network" "vnet" {
