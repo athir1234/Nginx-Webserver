@@ -9,15 +9,21 @@ terraform {
       version = "~>3.0"
     }
   }
-  backend "azurerm" {
-    resource_group_name  = "tfstatefilerg"
-    storage_account_name = "tfstatefile2024041423"
-    container_name       = "tfstatecontainer"
-    key                  = "terraform.tfstate" #seperate statefile for each workspace env will be created automatically in remote/local
+  # backend "azurerm" {
+  #   resource_group_name  = "tfstatefilerg"
+  #   storage_account_name = "tfstatefile2024041423"
+  #   container_name       = "tfstatecontainer"
+  #   key                  = "terraform.tfstate" #seperate statefile for each workspace env will be created automatically in remote/local
+  # }
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "terraform_practice_2024"
+
+    workspaces {
+      name = "Nginx-Webserver-Dev"
+    }
   }
 }
 provider "azurerm" {
-  features {
-
-  }
+  features { }
 }
