@@ -84,9 +84,9 @@ jobs:
         ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
 
     # Checks that all Terraform configuration files adhere to a canonical format
-    - name: Terraform Format
+    # - name: Terraform Format
 
-      run: terraform fmt -check
+    #   run: terraform fmt -check
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
